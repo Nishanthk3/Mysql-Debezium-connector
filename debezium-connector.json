@@ -1,0 +1,17 @@
+{
+    "name": "all-schemas",
+    "config": {
+        "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+        "database.allowPublicKeyRetrieval":"true",
+        "database.hostname": "6800f1a8dd9b",
+        "database.port": "3306",
+        "database.user": "root",
+        "database.password": "my-secret-pw",
+        "database.server.name": "MYSQL",
+        "database.include.list": "playground,account",
+        "topic.prefix": "topic",
+        "schema.history.internal.kafka.bootstrap.servers": "kafka:29092", 
+        "schema.history.internal.kafka.topic": "schema_history_internal_topic",
+        "database.server.id": 1
+    }
+}
