@@ -1,14 +1,22 @@
-Pull the necessary docker containers
-docker pull mysql
-docker pull zookeeper
-docker pull confluentinc/cp-kafka
-docker pull debezium/connect
-docker pull obsidiandynamics/kafdrop
-
-and then run the command
+## Docker compose command
 ```
 docker-compose.yaml
 ```
+The above command pulls the below docker containers and starts
 
-to register a debezium connector to mysql, using the below endpoint with POST method and body debezium-connector.json from this file
+
+```
+- mysql
+- zipkin
+- zookeeper
+- confluentinc/cp-kafka
+- debezium/connect
+- obsidiandynamics/kafdrop
+```
+
+
+To register a debezium connector to mysql, 
+Use the below endpoint with POST method and body [debezium-connector.json](https://github.com/Nishanthk3/Mysql-Debezium-connector/blob/main/debezium-connector.json) file
+```
 http://localhost:8083/connectors
+```
