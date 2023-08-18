@@ -6,6 +6,14 @@ services:
       - 2000:3306
     environment: 
       MYSQL_ROOT_PASSWORD: my-secret-pw
+    volumes:
+      - ./data/db:/var/lib/mysql
+
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - 9411:9411
 
   zookeeper:
     image: zookeeper
